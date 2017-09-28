@@ -1,0 +1,19 @@
+<!-- LIst Movies-->
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>duration (min)</td>
+      <td>year</td>
+      <td>Sinopsis</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="list" *ngFor="let movie of movies; let i = index">
+      <td>{{movie.name}}</td>
+      <td>{{movie.duration}}</td>
+      <td>{{movie.year}}</td>
+      <td>{{movie.sinopsis}}</td>
+    </tr>
+  </tbody>
+</table>

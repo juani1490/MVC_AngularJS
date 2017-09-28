@@ -1,0 +1,7 @@
+Create a movie listing with your favorite movies. Data shall be persisted in localhost.
+
+Show movie details in a separate details view.
+
+Allow to add / edit / remove movies from the list.
+
+Configure Karma and write tests for your application.

@@ -1,0 +1,145 @@
+<!-- LIst Movies-->
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Name</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="list" *ngFor="let movie of movies; let i = index">
+      <td>{{movie.name}}</td>
+      <td>
+        <a (click)="editMovie(i);" class="btn btn-success btnedit">Edit</a>
+        <a (click)="deletMovie(i);" class="btn btn-danger">Remove</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--Edit Movie-->
+<div class="containerEdit" *ngIf ="estado" >
+  <div class="col-sm-4">
+    <h2>Update Data:</h2>
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <label for="name" class="control-label col-sm-2">
+                Name
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"
+                  name="name" [(ngModel)]="savemovie2.name"
+                  placeholder="Enter a New Name"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="duration" class="control-label col-sm-2">
+                Duration
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="duration"
+                  name="duration" [(ngModel)]="savemovie2.duration"
+                  placeholder="Enter a New duration"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="year" class="control-label col-sm-2">
+                Year
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="year"
+                  name="year" [(ngModel)]="savemovie2.year"
+                  placeholder="Enter a New year"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sinopsis" class="control-label col-sm-2">
+                sinopsis
+              </label>
+              <div class="col-sm-10">
+                <textarea name="comentarios" rows="5" cols="40" class="form-control" id="sinopsis"
+                  name="sinopsis" [(ngModel)]="savemovie2.sinopsis"
+                  placeholder="Enter a New sinopsis"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success" (click)="updateMovie()">
+                  Save
+                </button>
+              </div>
+            </div>
+          </form>
+  </div>
+</div>
+
+<!--Add Movie-->
+<div class="containerAdd" *ngIf="estado2">
+    <div class="col-sm-4">
+    <h2>Add a Movie:</h2>
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <label for="name" class="control-label col-sm-2">
+                Name
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"
+                  name="name" [(ngModel)]="savemovie.name"
+                  placeholder="Enter a New Name"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="duration" class="control-label col-sm-2">
+                Duration
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="name"
+                  name="duration" [(ngModel)]="savemovie.duration"
+                  placeholder="Enter a New duration"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="year" class="control-label col-sm-2">
+                Year
+              </label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="year"
+                  name="year" [(ngModel)]="savemovie.year"
+                  placeholder="Enter a New year"
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sinopsis" class="control-label col-sm-2">
+                sinopsis
+              </label>
+              <div class="col-sm-10">
+                <textarea name="comentarios" rows="5" cols="40" class="form-control" id="sinopsis"
+                  name="sinopsis" [(ngModel)]="savemovie.sinopsis"
+                  placeholder="Enter a New sinopsis"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+                <button type="submit" class="btn btn-success" (click)="addMovie()">
+                  Add
+                </button>
+              </div>
+            </div>
+          </form>
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+.table{
+       border-radius: 4px;
+       margin-top: 20px;
+       padding: 30px;
+       background: white;
+       width: 30%;
+       color: black;
+      }
+
+.btnedit{
+     background: yellow;
+     color: black;
+    }
+    .btnedit:hover{
+               background:lightyellow;
+              }
+/*
+.containerEdit{
+  width: 1000px;
+  bottom: 600px;
+  left: 600px;
+  position: fixed;
+}
+
+.containerAdd{
+  width: 1000px;
+  bottom: 600px;
+  left: 600px;
+  position: fixed;
+
+
+}
+*/
